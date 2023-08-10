@@ -29,9 +29,11 @@ app.get("/api", (req, res) => {
                 const markerData = {
                     name: results[0].name,
                     location: results[0].location,
+                    operator: results[0].operator,
+                    water: results[0].water,
                     depth: results[0].depth,
-                    energy: results[0].energy,
-                    emissions: results[0].emissions
+                    length: results[0].length,
+                    elevation: results[0].elevation
                 };
                 res.json({ data: markerData });
             } 
