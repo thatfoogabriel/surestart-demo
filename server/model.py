@@ -21,7 +21,6 @@ y_scaled = scaler_y.fit_transform(y)
 
 X_train, X_test, y_train, y_test = train_test_split(X_scaled, y_scaled, test_size=0.2, random_state=42)
 
-# Convert data to TensorFlow tensors
 X_train_scaled = tf.convert_to_tensor(X_train, dtype=tf.float32)
 y_train_scaled = tf.convert_to_tensor(y_train, dtype=tf.float32)
 
@@ -35,7 +34,7 @@ model = tf.keras.Sequential([
 ])
 
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_absolute_error'])
-history = model.fit(X_train_scaled, y_train_scaled, epochs=100, batch_size=32, validation_split=0.2)
+history = model.fit(X_train_scaled, y_train_scaled, epochs=100, batch_size=32, validation_split=0.1)
 
 X_test_scaled = scaler_x.transform(X_test)
 y_test_scaled = scaler_y.transform(y_test)
