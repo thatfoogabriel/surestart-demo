@@ -59,22 +59,38 @@ export default function App() {
         }, []);
 
     return (
-    <div className="grid grid-cols-2 gap-4">
-        <div id='map' style={{height: '100vh' }}></div>
-        {data && (
-            <div className='flex flex-col'>
+    <div>
+        <div className="flex flex-col items-center justify-center text-white bg-blue-800 p-4">
+            <p className='text-5xl font-bold mb-3'>Frack On Track</p>
+            <p className='text-lg'>by DataDrillers</p>
+        </div>
+        <div className="grid grid-cols-2">
+            <div id='map' style={{height: 'calc(100vh - 120px)' }}></div>
+            {data ? (
                 <div>
-                    <p>Name: {data.name}</p>
-                    <p>Location: {data.location}</p>
-                    <p>Depth (meters): {data.depth}</p>
-                    <p>Energy Produced (watts): {data.energy}</p>
-                    <p>Emissions (kilotons): {data.emissions}</p>
+                    
+                </div>
+            ) : (
+                <div className='flex flex-col mx-24 mt-10 h-1/3'>
+                <div className='grid grid-cols-2 mb-8'>
+                    <div>
+                        <p className='text-4xl font-semibold mb-4'>{data.name}</p>
+                        <p className='mb-1'>{data.location}</p>
+                        <p>Operated by {data.operator}</p>
+                    </div>
+                    <div className='ml-28'>
+                        <p className='text-lg mb-3'>Water Use: {data.water} bbl</p>
+                        <p className='text-lg mb-3'>Depth: {data.depth}ft</p>
+                        <p className='text-lg mb-3'>Lateral Length: {data.length}ft</p>
+                        <p className='text-lg'>Elevation: {data.elevation}ft</p>
+                    </div>
                 </div>
                 <div className="flex justify-center mt-2">
-                    <button className='max-w-xs text-lg font-bold bg-blue-500 hover:bg-blue-600 rounded-2xl px-4 py-2'>Calculate Efficiency Rating</button>
+                    <button className='max-w-xs text-lg text-white font-bold bg-blue-500 hover:bg-blue-600 rounded-xl px-4 py-2'>Calculate Efficiency Rating</button>
                 </div>
-            </div>
-        )}
+                </div>
+            )}
+        </div>
     </div>
     );
 }
