@@ -12,8 +12,8 @@ export default function App() {
 
         window.initMap = () => {
             const map = new window.google.maps.Map(document.getElementById('map'), {
-                center: { lat: 35.8997 , lng: -120.4327 },
-                zoom: 6,
+                center: { lat: 37.9717 , lng: -100.8727 },
+                zoom: 4.75,
             });
 
             const markers = [
@@ -59,15 +59,20 @@ export default function App() {
         }, []);
 
     return (
-    <div className="App">
-        <div id="map" style={{ width: '640px', height: '480px' }}></div>
+    <div className="grid grid-cols-2 gap-4">
+        <div id='map' style={{height: '100vh' }}></div>
         {data && (
-            <div>
-                <p>Name: {data.name}</p>
-                <p>Location: {data.location}</p>
-                <p>Depth (meters): {data.depth}</p>
-                <p>Energy Produced (watts): {data.energy}</p>
-                <p>Emissions (kilotons): {data.emissions}</p>
+            <div className='flex flex-col'>
+                <div>
+                    <p>Name: {data.name}</p>
+                    <p>Location: {data.location}</p>
+                    <p>Depth (meters): {data.depth}</p>
+                    <p>Energy Produced (watts): {data.energy}</p>
+                    <p>Emissions (kilotons): {data.emissions}</p>
+                </div>
+                <div className="flex justify-center mt-2">
+                    <button className='max-w-xs text-lg font-bold bg-blue-500 hover:bg-blue-600 rounded-2xl px-4 py-2'>Calculate Efficiency Rating</button>
+                </div>
             </div>
         )}
     </div>
