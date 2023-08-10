@@ -189,7 +189,7 @@ export default function App() {
             <div id='map' style={{height: 'calc(100vh - 112px)' }}></div>
             <div className='flex flex-col'>
             {data ? (
-                <div className='flex flex-col ml-20 mt-16 h-1/3 text-white'>
+                <div className='flex flex-col ml-20 mt-14 h-1/3 text-white'>
                 <div className='grid grid-cols-2'>
                     <div>
                         <p className='text-5xl font-semibold mb-5'>{data.name}</p>
@@ -206,13 +206,13 @@ export default function App() {
                 <div className="flex justify-center mt-8">
                     <button 
                         onClick={handlePress}
-                        className='max-w-xs text-lg text-black font-bold bg-yellow-500 hover:bg-yellow-600 rounded-xl px-5 py-3'>
+                        className='max-w-xs text-lg text-black font-bold bg-yellow-400 hover:bg-yellow-500 rounded-xl px-5 py-3'>
                             Calculate Efficiency Rating
                     </button>
                 </div>
                 </div>
             ) : (
-                <div className="flex items-center justify-center mx-24 mt-32 h-1/3 text-4xl">
+                <div className="flex items-center justify-center mx-24 mt-32 h-1/3 text-white text-4xl">
                     Click on a point to start
                 </div>
             )}
