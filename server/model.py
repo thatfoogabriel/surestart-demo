@@ -34,7 +34,7 @@ model = tf.keras.Sequential([
 ])
 
 model.compile(optimizer='adam', loss='mean_squared_error', metrics=['mean_absolute_error'])
-history = model.fit(X_train_scaled, y_train_scaled, epochs=100, batch_size=32, validation_split=0.1)
+history = model.fit(X_train_scaled, y_train_scaled, epochs=100, batch_size=32, validation_split=0.1) #0.001 = learning rate
 
 training_dict = {}
 validation_dict = {}
