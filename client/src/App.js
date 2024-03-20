@@ -264,7 +264,7 @@ export default function App() {
                         <div className='flex flex-col mx-20 mt-4 h-1/3 text-white'>
                             <div className='flex justify-center'>
                                 <div className='w-full'>
-                                    <p className='text-4xl text-black font-semibold mb-2 text-center'>{data.name}</p>
+                                    <p className='text-4xl text-black font-semibold mb-4 text-center'>{data.name}</p>
                                     <div className='flex justify-center'>
                                         <div className='w-full h-[3px] mb-1 bg-gray-300 rounded-xl'></div>
                                     </div>
@@ -348,7 +348,7 @@ export default function App() {
                     Who are we?
                 </p>
                 <p className='text-lg mt-2 ml-4'>
-                    We are a team of college students of varying years and backgrounds, but who share a common interest in finding ways to use our technical skills to tackle important world issues. We took advantage of this opportunity to learn about machine learning and teamwork to build a product we could only dream of at first.
+                    We are a team of college students of varying years and backgrounds, but who share a common interest in finding ways to use our technical skills to tackle important world issues. We took advantage of this opportunity to learn about machine learning and teamwork to build a product we could only dream of.
                 </p>
                 <p className='text-2xl font-semibold mt-5'>
                     What is Fracking?
@@ -370,7 +370,7 @@ export default function App() {
                 </p>
             </div>
         </div>
-        <div className=' flex justify-center items-center w-full h-40 bg-bottomBar'>
+        <div className=' flex justify-center items-center w-full h-32 bg-bottomBar'>
             <p className='text-lg text-white'>
                 @2023 FrackOnTrack | Team Data Drillers | SureStart Create-A-Thon
             </p>
